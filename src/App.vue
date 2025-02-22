@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { reactive } from 'vue';
-import itemsListComponent from './components/items/itemsList.component.vue';
+import itemsListComponent from './components/items/ItemsList.component.vue';
 import type { ItemInterface } from './models/items/Item.interface';
 
 // mock some data:

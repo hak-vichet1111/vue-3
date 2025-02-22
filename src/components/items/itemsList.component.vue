@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { ItemInterface } from '../../models/items/Item.interface';
+import ItemComponent from '../children/Item.component.vue';
 
 defineProps<{ items: ItemInterface[] }>()
 // defineProps<{ items: any[] }>()
@@ -22,10 +23,11 @@ const handleClick = (item: ItemInterface) => {
 <template>
     <div>
         <h3>Items:</h3>
-        <ul>
+        <!-- <ul>
             <li v-for="(item, index) in items" :key="item.id" @click="handleClick(item)">
                 {{ item.id }} [{{ item.selected }}]
             </li>
-        </ul>
+        </ul> -->
+        <ItemComponent v-for="(item, index) in items" :key="item.id" :model="item" @select-item="handleClick(item)" />
     </div>
 </template>
