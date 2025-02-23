@@ -6,16 +6,23 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+
+    "test": "vitest run",
+    "test-watch": "vitest watch",
+    "test-converage": "vitest run --coverage"
   },
   "dependencies": {
     "vue": "^3.5.13"
   },
   "devDependencies": {
+    "@testing-library/user-event": "^14.6.1",
+    "@testing-library/vue": "^8.1.0",
     "@vitejs/plugin-vue": "^5.2.1",
     "@vue/tsconfig": "^0.7.0",
     "typescript": "~5.7.2",
     "vite": "^6.1.0",
+    "vitest": "^3.0.6",
     "vue-tsc": "^2.2.0"
   }
 }
